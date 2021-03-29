@@ -45,6 +45,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 "Plug 'sirver/ultisnips'
+Plug 'arcticicestudio/nord-vim'
 Plug 'vim-scripts/AutoComplPop'
 Plug 'neovim/nvim-lspconfig'
 Plug 'haorenW1025/completion-nvim'
@@ -178,4 +179,3 @@ noremap <leader>q :call Compile()<CR><CR>
 "source $HOME/.config/nvim/plug-config/coc.vim
 
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
-
