@@ -1,2 +1,2 @@
-colorscheme nord
-let g:airline_theme="nord"
+colorscheme gruvbox
+let g:airline_theme="gruvbox"
