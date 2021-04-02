@@ -9,9 +9,7 @@ set smartindent
 set nu 
 set relativenumber
 set nowrap
-set ignorecase
-set smartcase
-set noswapfile
+set ignorecase set smartcase set noswapfile
 set nobackup
 set undodir=~/.config/nvim/undodir
 set undofile
@@ -60,6 +58,7 @@ Plug 'tomasr/molokai'
 Plug 'junegunn/seoul256.vim'
 Plug 'morhetz/gruvbox'
 Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'sainnhe/gruvbox-material'
 call plug#end() 
 
 set termguicolors     " enable true colors support
@@ -92,6 +91,7 @@ map <leader>h :Help<CR>
 map <leader>b :Buffers<CR>
 map <leader>r :Rg<CR>
 map <leader>a <C-^>
+map <leader>m :make<CR>
 
 autocmd FileType tex,latex setlocal spell spelllang=fr
 inoremap <C-l> <c-g>u<Esc>[s1z=`]a<c-g>u
