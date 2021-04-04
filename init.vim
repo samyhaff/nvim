@@ -26,6 +26,7 @@ set hidden
 set cursorline
 set completeopt=menuone,noselect
 set shortmess+=c
+set splitbelow splitright
 
 let g:vimsyn_embed= 'l'
 
@@ -34,8 +35,6 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'lervag/vimtex'
 Plug 'junegunn/goyo.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ap/vim-css-color'
@@ -74,6 +73,18 @@ luafile ~/.config/nvim/lsp/python-lsp.lua
 luafile ~/.config/nvim/lsp/bash-lsp.lua
 luafile ~/.config/nvim/lsp/clangd-lsp.lua
 
+" splits
+noremap <C-h> <C-w>h
+noremap <C-j> <C-w>j
+noremap <C-k> <C-w>k
+noremap <C-l> <C-w>l
+noremap <silent> <C-Left>  :vertical resize -3<CR>
+noremap <silent> <C-Right> :vertical resize +3<CR>
+noremap <silent> <C-Up>    :resize -3<CR>
+noremap <silent> <C-Down>  :resize +3<CR>
+map <leader>th <C-w>t<C-w>H
+map <leader>tv <C-w>t<C-w>K
+
 "tab completion 
 inoremap <silent><expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
@@ -83,8 +94,6 @@ let g:vimtex_view_method='zathura'
 let g:vimtex_quickfix_mode=0
 set conceallevel=1
 let g:tex_conceal='abdmg'
-
-"let g:airline#extensions#tabline#enabled = 1
 
 map <leader>s :setlocal spell spelllang=fr<CR>
 map <leader>g :Goyo<CR>
